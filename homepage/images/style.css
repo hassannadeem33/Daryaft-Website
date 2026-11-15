@@ -1,0 +1,733 @@
+
+/* =========================================
+   DARYAFT — VISUAL IDENTITY
+   Forest Green / Cream / Gold
+========================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Nastaliq+Urdu&display=swap');
+
+
+/* =========================================
+   1. DESIGN VARIABLES
+========================================= */
+
+:root {
+    --green: #03401B;
+    --green-dark: #022D14;
+    --green-light: #0A5428;
+
+    --cream: #F4F1E4;
+    --cream-dark: #E9E4D2;
+
+    --gold: #F4BF4B;
+    --gold-dark: #D9A42F;
+
+    --text-dark: #102719;
+    --text-muted: #6D756B;
+
+    --font-main: 'DM Sans', sans-serif;
+    --font-display: 'Instrument Serif', serif;
+    --font-urdu: 'Noto Nastaliq Urdu', serif;
+
+    --page-width: 1280px;
+    --page-padding: clamp(24px, 7vw, 110px);
+}
+
+
+/* =========================================
+   2. RESET & GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--green-dark);
+}
+
+
+/* =========================================
+   3. HEADER / NAVIGATION
+========================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 92px;
+    padding: 20px var(--page-padding);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: var(--cream);
+    border-bottom: 1px solid rgba(3, 64, 27, 0.12);
+
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand-name {
+    color: var(--green);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 3vw, 45px);
+}
+
+.navigation a {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--gold-dark);
+    transition: width 0.25s ease;
+}
+
+.navigation a:hover {
+    color: var(--gold-dark);
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.header-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+    border: 1px solid rgba(3, 64, 27, 0.2);
+    border-radius: 50px;
+
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+    box-shadow: 0 0 0 4px rgba(244, 191, 75, 0.2);
+}
+
+
+/* =========================================
+   4. HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 690px;
+    padding: 105px var(--page-padding) 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--green);
+    color: var(--cream);
+}
+
+/* Subtle background grid */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(244, 241, 228, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244, 241, 228, 0.035) 1px, transparent 1px);
+
+    background-size: 65px 65px;
+    mask-image: linear-gradient(to right, black, transparent 85%);
+    pointer-events: none;
+}
+
+/* Gold decorative circle */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -180px;
+    top: 70px;
+
+    border: 1px solid rgba(244, 191, 75, 0.22);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 45px rgba(244, 191, 75, 0.025),
+        0 0 0 90px rgba(244, 191, 75, 0.02);
+
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+    animation: heroEnter 0.9s ease both;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 32px;
+
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.hero h1 {
+    max-width: 900px;
+
+    color: var(--cream);
+    font-size: clamp(55px, 8.5vw, 112px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -6px;
+}
+
+.hero-urdu {
+    margin-top: 28px;
+
+    color: var(--gold);
+    font-family: var(--font-urdu);
+    font-size: clamp(22px, 3vw, 35px);
+    line-height: 2.1;
+    direction: rtl;
+}
+
+.hero-bottom {
+    margin-top: 65px;
+    padding-top: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    border-top: 1px solid rgba(244, 241, 228, 0.2);
+}
+
+.brand-line {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: clamp(22px, 3vw, 33px);
+    font-style: italic;
+}
+
+.launch-text {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero-index {
+    position: absolute;
+    right: var(--page-padding);
+    bottom: 60px;
+
+    color: rgba(244, 241, 228, 0.35);
+    font-family: var(--font-display);
+    font-size: 18px;
+}
+
+
+/* =========================================
+   5. INTRODUCTION
+========================================= */
+
+.introduction {
+    padding: 125px var(--page-padding);
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.7fr;
+    gap: 80px;
+}
+
+.section-marker {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-marker::before {
+    content: '01 / ';
+    color: var(--gold-dark);
+}
+
+.introduction-content {
+    max-width: 760px;
+}
+
+.intro-english {
+    color: var(--green);
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: -1.2px;
+}
+
+.language-divider {
+    width: 55px;
+    height: 3px;
+    margin: 38px 0;
+    background: var(--gold);
+}
+
+.intro-urdu {
+    color: var(--text-muted);
+    font-family: var(--font-urdu);
+    font-size: 19px;
+    line-height: 2.4;
+    direction: rtl;
+}
+
+
+/* =========================================
+   6. HOW IT WORKS
+========================================= */
+
+.how-it-works {
+    padding: 110px var(--page-padding);
+    background: var(--cream-dark);
+}
+
+.section-heading {
+    display: grid;
+    grid-template-columns: 0.65fr 1.7fr;
+    gap: 80px;
+    margin-bottom: 70px;
+}
+
+.heading-content h2 {
+    color: var(--green);
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+}
+
+.heading-urdu {
+    margin-top: 15px;
+    color: var(--green);
+    font-family: var(--font-urdu);
+    font-size: 21px;
+    line-height: 2.2;
+    direction: rtl;
+}
+
+
+/* =========================================
+   7. FEATURE CARDS
+========================================= */
+
+.feature-list {
+    border-top: 1px solid rgba(3, 64, 27, 0.25);
+}
+
+.feature-card {
+    min-height: 205px;
+    padding: 42px 15px;
+
+    display: grid;
+    grid-template-columns: 0.3fr 1.5fr 0.3fr;
+    align-items: center;
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(3, 64, 27, 0.25);
+
+    transition:
+        background 0.35s ease,
+        padding 0.35s ease;
+}
+
+.feature-card:hover {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: rgba(244, 191, 75, 0.12);
+}
+
+.feature-number {
+    color: var(--gold-dark);
+    font-family: var(--font-display);
+    font-size: 27px;
+}
+
+.feature-content h3 {
+    margin-bottom: 12px;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 400;
+}
+
+.feature-english {
+    max-width: 580px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.feature-urdu {
+    max-width: 580px;
+    margin-top: 13px;
+
+    color: var(--green);
+    font-family: var(--font-urdu);
+    font-size: 16px;
+    line-height: 2.3;
+    direction: rtl;
+}
+
+.feature-symbol {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(3, 64, 27, 0.25);
+    border-radius: 50%;
+
+    color: var(--green);
+    font-size: 20px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.feature-card:hover .feature-symbol {
+    background: var(--green);
+    color: var(--gold);
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   8. FOOTER
+========================================= */
+
+.site-footer {
+    padding: 75px var(--page-padding) 30px;
+
+    background: var(--green-dark);
+    color: var(--cream);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+
+    padding-bottom: 65px;
+}
+
+.footer-brand {
+    color: var(--gold);
+    font-family: var(--font-display);
+    font-size: 42px;
+}
+
+.footer-description {
+    max-width: 540px;
+    color: rgba(244, 241, 228, 0.75);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.footer-urdu {
+    max-width: 540px;
+    margin-top: 22px;
+
+    color: rgba(244, 241, 228, 0.75);
+    font-family: var(--font-urdu);
+    font-size: 15px;
+    line-height: 2.5;
+    direction: rtl;
+}
+
+.footer-bottom {
+    padding-top: 25px;
+    border-top: 1px solid rgba(244, 241, 228, 0.2);
+
+    color: rgba(244, 241, 228, 0.5);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   9. ANIMATIONS
+========================================= */
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   10. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding-top: 15px;
+        border-top: 1px solid rgba(3, 64, 27, 0.12);
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .introduction,
+    .section-heading {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    :root {
+        --page-padding: 23px;
+    }
+
+    .site-header {
+        min-height: 75px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .header-status {
+        padding: 8px 11px;
+        font-size: 8px;
+    }
+
+    .navigation {
+        gap: 20px;
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+
+    .navigation a {
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding-top: 90px;
+        padding-bottom: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(53px, 13vw, 75px);
+        letter-spacing: -3.5px;
+    }
+
+    .hero-urdu {
+        font-size: 23px;
+    }
+
+    .hero-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 55px;
+    }
+
+    .hero-index {
+        display: none;
+    }
+
+    .introduction {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .intro-english {
+        font-size: 25px;
+    }
+
+    .intro-urdu {
+        font-size: 16px;
+    }
+
+    .how-it-works {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .heading-content h2 {
+        font-size: 43px;
+    }
+
+    .feature-card {
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+        padding: 32px 0;
+    }
+
+    .feature-card:hover {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .feature-number {
+        font-size: 22px;
+    }
+
+    .feature-content h3 {
+        font-size: 33px;
+    }
+
+    .feature-english {
+        font-size: 13px;
+    }
+
+    .feature-urdu {
+        font-size: 14px;
+    }
+
+    .feature-symbol {
+        display: none;
+    }
+
+    .site-footer {
+        padding-top: 60px;
+    }
+}
+
+
+/* Respect users who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
