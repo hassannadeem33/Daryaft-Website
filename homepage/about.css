@@ -1,0 +1,259 @@
+/* About page. Loads after style.css, so the header, footer and page
+   background come from your homepage styles. Everything here is scoped
+   to .about so nothing on the homepage changes. */
+
+:root {
+    --green: #03401B;
+    --cream: #F4F1E4;
+    --gold:  #F4BF4B;
+    --deep:  #022B12;
+    --rule:  color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.about {
+    --gutter: clamp(20px, 5vw, 72px);
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.about h1,
+.about h3,
+.about .statement,
+.about .mission,
+.about .belief,
+.about .lead,
+.about .about-close p,
+.about .num,
+.about .n {
+    font-family: "Young Serif", Georgia, serif;
+    font-weight: 400;
+}
+
+/* INTRO */
+.about-hero {
+    padding: clamp(72px, 14vw, 190px) 0 clamp(56px, 9vw, 120px);
+}
+
+.eyebrow {
+    margin: 0 0 clamp(24px, 3vw, 36px);
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.about-hero h1 {
+    margin: 0 0 0.45em;
+    max-width: 12ch;
+    font-size: clamp(2.9rem, 8.6vw, 7.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+.lead {
+    margin: 0;
+    max-width: 26ch;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    line-height: 1.35;
+    color: var(--gold);
+}
+
+/* SECTIONS: a narrow label column and a wide reading column */
+.about-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px 56px;
+    padding: clamp(44px, 7vw, 104px) 0;
+    border-top: 1px solid var(--rule);
+}
+
+.about-label {
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.about-label .num {
+    font-size: 1rem;
+    letter-spacing: 0;
+    color: var(--gold);
+}
+
+@media (min-width: 900px) {
+    .about-section {
+        grid-template-columns: 250px minmax(0, 1fr);
+    }
+    .about-label {
+        position: sticky;
+        top: 32px;
+        align-self: start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.about-body {
+    max-width: 66ch;
+}
+
+.about-body p {
+    margin: 0 0 1.5em;
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.8;
+    text-wrap: pretty;
+}
+
+.about-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* STANDOUT LINES */
+.about .statement {
+    margin: 1.1em 0;
+    font-size: clamp(1.8rem, 3.6vw, 2.9rem);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+}
+
+.about .statement:first-child {
+    margin-top: 0;
+}
+
+.about .mission {
+    margin: 0 0 1.3em;
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    color: var(--gold);
+    text-wrap: balance;
+}
+
+.about .belief {
+    margin: 0 0 1em;
+    max-width: 28ch;
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+    line-height: 1.28;
+    text-wrap: balance;
+}
+
+/* WHAT WE DO GRID */
+.do-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 44px;
+    border-top: 1px solid var(--rule);
+}
+
+.do-item {
+    padding: 30px 32px 36px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.do-item:nth-child(odd) {
+    border-right: 1px solid var(--rule);
+}
+
+.do-item:nth-child(even) {
+    padding-left: 32px;
+    padding-right: 0;
+}
+
+.do-item .n {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 1rem;
+    color: var(--gold);
+}
+
+.do-item h3 {
+    margin: 0 0 0.5em;
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    line-height: 1.2;
+}
+
+.about-body .do-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    opacity: 0.85;
+}
+
+@media (max-width: 720px) {
+    .do-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .do-item,
+    .do-item:nth-child(odd),
+    .do-item:nth-child(even) {
+        padding: 26px 0 30px;
+        border-right: 0;
+    }
+}
+
+/* CLOSING BLOCK */
+.about-close {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 40px;
+    margin: clamp(48px, 8vw, 120px) 0 clamp(72px, 11vw, 150px);
+    padding: clamp(36px, 6vw, 92px);
+    background: var(--gold);
+    color: var(--deep);
+}
+
+.about-close p {
+    margin: 0;
+    max-width: 13ch;
+    font-size: clamp(2.1rem, 5.2vw, 4.2rem);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+
+/* the logo's two arches, drawn in CSS */
+.arches {
+    position: relative;
+    width: 170px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.arches i {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    border-radius: 999px 999px 0 0;
+}
+
+.arches i:nth-child(1) {
+    left: 0;
+    width: 82px;
+    height: 150px;
+    background: var(--cream);
+}
+
+.arches i:nth-child(2) {
+    left: 58px;
+    width: 112px;
+    height: 112px;
+    background: var(--deep);
+    box-shadow: 0 0 0 9px var(--gold);
+}
+
+@media (max-width: 720px) {
+    .about-close {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* current page in the menu */
+.navigation a[aria-current="page"] {
+    color: var(--gold);
+}
