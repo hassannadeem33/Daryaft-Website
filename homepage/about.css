@@ -6,7 +6,7 @@
     --green: #03401B;
     --cream: #F4F1E4;
     --gold:  #F4BF4B;
-    --deep:  #022B12;
+    --deep:  #03401B;
     --rule:  color-mix(in srgb, currentColor 22%, transparent);
 }
 
