@@ -257,3 +257,30 @@
 .navigation a[aria-current="page"] {
     color: var(--gold);
 }
+/* Match the homepage: cream page, green text */
+body {
+    background: var(--cream);
+    color: var(--green);
+}
+
+/* gold text is hard to read on cream, so use green */
+.about .lead,
+.about .mission,
+.about-label .num,
+.do-item .n {
+    color: var(--green);
+}
+
+/* keep a touch of gold as a highlighter under the numbers */
+.about-label .num,
+.do-item .n {
+    display: inline-block;
+    box-shadow: inset 0 -0.4em 0 var(--gold);
+}
+
+/* current page in the menu */
+.navigation a[aria-current="page"] {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
