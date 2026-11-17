@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Daryaft | دریافت</title>
+    <meta name="description" content="Get in touch with Daryaft: ask a question, report a correction, suggest a scheme or offer to contribute.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Daryaft home">
+        <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
+        <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
+    </a>
+
+    <!-- NEW: status pill + social icons together -->
+    <div class="header-right">
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span>Coming soon</span>
+        </div>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener" aria-label="Daryaft on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener" aria-label="Daryaft on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.85h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:daryaft.support@gmail.com" aria-label="Email Daryaft">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 7l9 6 9-6"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navigation" aria-label="Main navigation">
+        <a href="index.html">All programmes</a>
+        <a href="index.html">Upcoming programmes</a>
+        <a href="vision.html">Vision</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+</header>
+
+    <div class="page-layout">
+
+        <aside class="side-panel" aria-label="Quick tools">
+        <h2 class="side-title">Quick tools</h2>
+
+        <ul class="side-list">
+            <li>
+                <!-- use your existing eligibility page link here -->
+                <a href="eligibility.html" class="side-link">
+                    <span class="side-link-title">Check eligibility <span>↗</span></span>
+                    <span class="side-link-urdu" lang="ur" dir="rtl">اہلیت چیک کریں</span>
+                </a>
+            </li>
+            <li>
+                <!-- use your existing "Ask Daryaft" page link here -->
+                <a href="ask.html" class="side-link">
+                    <span class="side-link-title">Talk to Daryaft bot <span>↗</span></span>
+                    <span class="side-link-urdu" lang="ur" dir="rtl">دریافت بوٹ سے بات کریں</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+        <div class="page-main">
+
+            <main class="contact">
+
+                <!-- LEFT: FORM -->
+                <section class="contact-form-wrap">
+                    <p class="contact-eyebrow">Contact us</p>
+                    <h1>Get in touch with Daryaft.</h1>
+                    <p class="contact-lead">Have a question, spotted a mistake, or know a scheme we should list? Fill out the form below and we’ll get back to you.</p>
+                    <p class="contact-lead-urdu" lang="ur" dir="rtl">کوئی سوال ہے، کوئی غلطی نظر آئی، یا کوئی اسکیم شامل کروانی ہے؟ نیچے فارم بھریں، ہم آپ سے رابطہ کریں گے۔</p>
+
+                    <form class="contact-form" id="contactForm">
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="firstName">First name</label>
+                                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                            </div>
+                            <div class="field">
+                                <label for="lastName">Last name</label>
+                                <input type="text" id="lastName" name="lastName" autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="topic">What is this about?</label>
+                            <select id="topic" name="topic" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option>General question</option>
+                                <option>Report incorrect or outdated scheme information</option>
+                                <option>Suggest a scheme to add</option>
+                                <option>Partnership or contributing</option>
+                                <option>Feedback on the website</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <p class="form-consent">By sending this message, you agree that Daryaft may use your details only to reply to you.</p>
+
+                        <button type="submit" class="form-submit">Send message</button>
+
+                        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+                    </form>
+                </section>
+
+                <!-- RIGHT: OTHER WAYS -->
+                <aside class="contact-info" aria-label="Other ways to reach us">
+
+                    <div class="info-block">
+                        <h2>Spotted a correction?</h2>
+                        <p>Scheme details change. If something on Daryaft is outdated or wrong, let us know and we’ll fix it. Always verify programme details through official sources before applying.</p>
+                        <a class="arrow-link" href="mailto:daryaft.support@gmail.com?subject=Correction%20for%20Daryaft">Report a correction</a>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Talk with us</h2>
+                        <p>Write to us at<br><a class="plain-link" href="mailto:daryaft.support@gmail.com">daryaft.support@gmail.com</a></p>
+                        <ul class="info-links">
+                            <li><span>LinkedIn</span><a class="plain-link" href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener">Daryaft</a></li>
+                            <li><span>Instagram</span><a class="plain-link" href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener">@daryaftpk</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block">
+                        <h2>Want to contribute?</h2>
+                        <p>If you care about civic tech, data or public policy, we’d love to hear from you.</p>
+                        <a class="arrow-link" href="team.html">Meet the team</a>
+                    </div>
+
+                </aside>
+
+            </main>
+
+        </div>
+    </div>
+
+    <footer class="site-footer" id="footer">
+        <p lang="ur" dir="rtl">دریافت</p>
+        <p>Some things are waiting to be found.</p>
+        <p>Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+        <p lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+        <p>© 2026 Daryaft. All rights reserved.</p>
+        <p lang="ur" dir="rtl">© 2026 دریافت۔</p>
+    </footer>
+
+    <script>
+        // No server needed: this opens the visitor's email app with the message ready to send.
+        var form = document.getElementById('contactForm');
+        var note = document.getElementById('formNote');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var first = form.firstName.value.trim();
+            var last = form.lastName.value.trim();
+            var name = (first + ' ' + last).trim();
+
+            var subject = '[Daryaft] ' + form.topic.value + ' - ' + name;
+            var body = form.message.value.trim() +
+                '\n\n---\nName: ' + name +
+                '\nEmail: ' + form.email.value.trim();
+
+            window.location.href = 'mailto:daryaft.support@gmail.com' +
+                '?subject=' + encodeURIComponent(subject) +
+                '&body=' + encodeURIComponent(body);
+
+            note.textContent = 'Your email app should open with the message ready. If nothing opens, email us directly at daryaft.support@gmail.com.';
+        });
+    </script>
+
+</body>
+</html>
