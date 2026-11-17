@@ -1,275 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team | Daryaft | دریافت</title>
+    <meta name="description" content="Meet the person building Daryaft, a platform that bridges the information gap between citizens and the public schemes, scholarships and grants meant for them.">
 
-    <title>Daryaft | دریافت — Opportunities Worth Finding</title>
-
-    <meta name="description" content="Daryaft connects people across Pakistan with scholarships, financial assistance, government programmes and opportunities worth discovering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Noto+Nastaliq+Urdu&family=Young+Serif&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="team.css">
 </head>
 
 <body>
-    <!-- HEADER -->
+
     <header class="site-header">
-        <a href="#" class="brand" aria-label="Daryaft home">
-            <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
-            <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
-        </a>
+    <a href="index.html" class="brand" aria-label="Daryaft home">
+        <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
+        <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
+    </a>
 
-        <nav class="navigation" aria-label="Main navigation">
-            <a href="programmes.html" class="is-soon" aria-disabled="true" tabindex="-1">All programmes</a>
-            <a href="upcoming.html" class="is-soon" aria-disabled="true" tabindex="-1">Upcoming programmes</a>
-            <a href="ask-daryaft.html" class="is-soon" aria-disabled="true" tabindex="-1">Ask Daryaft</a>
-            <a href="vision.html" class="is-soon" aria-disabled="true" tabindex="-1">Vision</a>
-            <a href="about.html">About</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html" class="is-soon" aria-disabled="true" tabindex="-1">Contact</a>
-            <a href="eligibility.html" class="nav-cta is-soon" aria-disabled="true" tabindex="-1">Check eligibility</a>
-        </nav>
-
+    <!-- NEW: status pill + social icons together -->
+    <div class="header-right">
         <div class="header-status">
             <span class="status-dot"></span>
             <span>Coming soon</span>
         </div>
 
-    </header>
+        <ul class="social-links">
+            <li>
+                <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener" aria-label="Daryaft on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener" aria-label="Daryaft on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.85h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:daryaft.support@gmail.com" aria-label="Email Daryaft">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="M3 7l9 6 9-6"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
 
+    <nav class="navigation" aria-label="Main navigation">
+        <a href="index.html">All programmes</a>
+        <a href="index.html">Upcoming programmes</a>
+        <a href="vision.html">Vision</a>
+        <a href="about.html">About</a>
+        <a href="team.html" aria-current="page">Team</a>
+        <a href="team.html#contact">Contact</a>
+    </nav>
+</header>
 
-    <main>
+    <div class="page-layout">
 
-        <!-- HERO SECTION -->
+    <aside class="side-panel" aria-label="Quick tools">
+        <h2 class="side-title">Quick tools</h2>
 
-        <section class="hero">
+        <ul class="side-list">
+            <li>
+                <!-- use your existing eligibility page link here -->
+                <a href="eligibility.html" class="side-link">
+                    <span class="side-link-title">Check eligibility <span>↗</span></span>
+                    <span class="side-link-urdu" lang="ur" dir="rtl">اہلیت چیک کریں</span>
+                </a>
+            </li>
+            <li>
+                <!-- use your existing "Ask Daryaft" page link here -->
+                <a href="ask.html" class="side-link">
+                    <span class="side-link-title">Talk to Daryaft bot <span>↗</span></span>
+                    <span class="side-link-urdu" lang="ur" dir="rtl">دریافت بوٹ سے بات کریں</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
 
-            <div class="hero-content">
+    <div class="page-main">
 
-                <p class="eyebrow">A NEW WAY TO DISCOVER OPPORTUNITIES</p>
+    <main class="about">
 
-                <h1>
-                    Connecting people<br>
-                    with opportunities<span>.</span>
-                </h1>
-
-                <p class="hero-urdu" lang="ur" dir="rtl">
-                    لوگوں کو مواقع سے جوڑنا۔
-                </p>
-
-                <div class="hero-bottom">
-
-                    <p class="brand-line">
-                        Some things are waiting to be found.
-                    </p>
-
-                    <p class="launch-text">
-                        Launching soon. &nbsp;|&nbsp;
-                        <span lang="ur" dir="rtl">جلد آ رہا ہے۔</span>
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="hero-index" aria-hidden="true">
-                <span>01</span>
-                <span class="index-line"></span>
-                <span>DISCOVER</span>
-            </div>
-
+        <!-- INTRO -->
+        <section class="about-hero">
+            <p class="eyebrow">Team</p>
+            <h1>Built to make public opportunities accessible.</h1>
+            <p class="lead">Daryaft is driven by a simple goal: bridging the information gap between citizens and the welfare schemes, scholarships and grants meant for them.</p>
         </section>
 
+        <!-- FOUNDER -->
+        <section class="founder">
+            <figure class="founder-photo">
+                <img src="images/founder.jpg" alt="Hassan Nadeem, founder of Daryaft">
+            </figure>
 
-        <!-- INTRODUCTION -->
-
-        <section class="introduction" id="about">
-
-            <div class="section-marker">
-                <span>01 / THE IDEA</span>
+            <div class="founder-text">
+                <h2 class="founder-name">Hassan Nadeem</h2>
+                <p class="founder-role">Founder</p>
+                <p>Currently pursuing a degree in Data Science at NUST, Hassan founded Daryaft to solve a problem he saw firsthand: valuable government and institutional schemes often fail to reach the people who need them most simply because the information is scattered and hard to navigate.</p>
+                <p>Combining strong data skills with a focus on clear, accessible design, he is building Daryaft to turn complex eligibility criteria into straightforward, actionable answers.</p>
             </div>
-
-            <div class="introduction-content">
-
-                <h2>
-                    Opportunities exist.<br>
-                    Finding them shouldn't be difficult.
-                </h2>
-
-                <p class="intro-english">
-                    Across Pakistan, opportunities exist for people looking to study,
-                    start something new or find financial support. But finding the
-                    right information isn't always easy. Daryaft brings these
-                    opportunities closer to you, making it easier to discover
-                    what's available and decide what comes next.
-                </p>
-
-                <div class="language-divider"></div>
-
-                <p class="intro-urdu" lang="ur" dir="rtl">
-                    پاکستان بھر میں ایسے کئی مواقع موجود ہیں جو تعلیم حاصل کرنے،
-                    کسی نئے کام کا آغاز کرنے یا مالی معاونت حاصل کرنے میں مدد دے
-                    سکتے ہیں۔ لیکن ان کے بارے میں درست معلومات حاصل کرنا ہمیشہ
-                    آسان نہیں ہوتا۔ دریافت کا مقصد ان مواقع کو آپ کے قریب لانا ہے،
-                    تاکہ آپ جان سکیں کہ آپ کے لیے کیا دستیاب ہے اور آگے کیا کرنا ہے۔
-                </p>
-
-            </div>
-
         </section>
 
-
-        <!-- HOW IT WORKS -->
-
-        <section class="how-it-works" id="how-it-works">
-
-            <div class="section-heading">
-
-                <div class="section-marker">
-                    <span>02 / THE APPROACH</span>
-                </div>
-
-                <div class="heading-content">
-                    <h2>What Daryaft will do<span>.</span></h2>
-
-                    <p lang="ur" dir="rtl" class="heading-urdu">
-                        دریافت کیا کرے گا؟
-                    </p>
-                </div>
-
+        <!-- JOIN US -->
+        <section class="join" id="contact">
+            <div class="join-text">
+                <h2>We’re growing.</h2>
+                <p>Daryaft is actively evolving. If you’re passionate about civic tech, data or public policy and want to contribute, reach out to us.</p>
             </div>
 
-
-            <div class="feature-list">
-
-                <!-- DISCOVER -->
-
-                <article class="feature-card">
-
-                    <div class="feature-number">01</div>
-
-                    <div class="feature-content">
-
-                        <h3>Discover</h3>
-
-                        <p class="feature-english">
-                            Explore scholarships, financial assistance,
-                            government programmes and other opportunities
-                            across Pakistan.
-                        </p>
-
-                        <p class="feature-urdu" lang="ur" dir="rtl">
-                            پاکستان بھر میں وظائف، مالی معاونت، سرکاری اسکیموں
-                            اور دیگر مواقع تلاش کریں۔
-                        </p>
-
-                    </div>
-
-                    <div class="feature-symbol" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- UNDERSTAND -->
-
-                <article class="feature-card">
-
-                    <div class="feature-number">02</div>
-
-                    <div class="feature-content">
-
-                        <h3>Understand</h3>
-
-                        <p class="feature-english">
-                            Learn who qualifies, what's required, the
-                            deadlines and the documents you'll need.
-                        </p>
-
-                        <p class="feature-urdu" lang="ur" dir="rtl">
-                            اہلیت کی شرائط، ضروری دستاویزات اور درخواست دینے
-                            کی آخری تاریخ کے بارے میں جانیں۔
-                        </p>
-
-                    </div>
-
-                    <div class="feature-symbol" aria-hidden="true">↗</div>
-
-                </article>
-
-
-                <!-- APPLY -->
-
-                <article class="feature-card">
-
-                    <div class="feature-number">03</div>
-
-                    <div class="feature-content">
-
-                        <h3>Apply</h3>
-
-                        <p class="feature-english">
-                            Find official application links and clear steps
-                            to apply directly through the relevant programme.
-                        </p>
-
-                        <p class="feature-urdu" lang="ur" dir="rtl">
-                            متعلقہ پروگرام کے سرکاری لنکس اور درخواست دینے
-                            کا طریقہ جانیں، تاکہ آپ براہِ راست درخواست دے سکیں۔
-                        </p>
-
-                    </div>
-
-                    <div class="feature-symbol" aria-hidden="true">↗</div>
-
-                </article>
-
-            </div>
-
+            <ul class="join-links">
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:daryaft.support@gmail.com">daryaft.support@gmail.com</a>
+                </li>
+                <li>
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener">Daryaft</a>
+                </li>
+                <li>
+                    <span>Instagram</span>
+                    <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener">@daryaftpk</a>
+                </li>
+            </ul>
         </section>
-
 
     </main>
 
+    </div>
+</div>
 
-    <!-- FOOTER -->
-
+    <!-- FOOTER: replace with the footer from your index.html so every page matches -->
     <footer class="site-footer" id="footer">
-
-        <div class="footer-top">
-
-            <div class="footer-brand">
-                <span lang="ur" dir="rtl">دریافت</span>
-                <p>Some things are waiting to be found.</p>
-            </div>
-
-            <div class="footer-description">
-
-                <p>
-                    Daryaft is an independent information platform and is
-                    not affiliated with or operated by any government department.
-                    Always verify programme details through official sources.
-                </p>
-
-                <p lang="ur" dir="rtl" class="footer-urdu">
-                    دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری
-                    ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے
-                    درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی
-                    تصدیق ضرور کریں۔
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>© 2026 Daryaft. All rights reserved.</p>
-
-            <p lang="ur" dir="rtl">© 2026 دریافت۔</p>
-
-        </div>
-
+        <p lang="ur" dir="rtl">دریافت</p>
+        <p>Some things are waiting to be found.</p>
+        <p>Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+        <p lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+        <p>© 2026 Daryaft. All rights reserved.</p>
+        <p lang="ur" dir="rtl">© 2026 دریافت۔</p>
     </footer>
 
 </body>
