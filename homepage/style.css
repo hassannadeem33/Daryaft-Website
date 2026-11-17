@@ -878,3 +878,231 @@ img {
         padding: 15px 0;
     }
 }
+
+
+/* =========================================
+   12. HEADER V3: CREAM TOP BAR + SOCIALS
+   Paste this at the very END of style.css
+========================================= */
+
+.site-header {
+    background: var(--cream);
+    border-bottom: 1px solid rgba(3, 64, 27, 0.12);
+}
+
+.site-header .brand {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* logo no longer needs the blend trick on cream */
+.site-header .brand img {
+    mix-blend-mode: normal;
+    border-radius: 10px;
+}
+
+.site-header .brand-name {
+    color: var(--green);
+}
+
+/* top bar, right side: status pill + social icons on one line */
+.site-header .header-right {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-right: var(--page-padding);
+}
+
+.site-header .header-right .header-status {
+    margin-right: 0;
+    border-color: rgba(3, 64, 27, 0.25);
+    color: var(--green);
+}
+
+.site-header .status-dot {
+    background: var(--gold-dark);
+    box-shadow: 0 0 0 4px rgba(244, 191, 75, 0.25);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--cream);
+
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.social-links a:hover {
+    background: var(--gold);
+    color: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.social-links svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* the menu bar is the second row */
+.site-header .navigation {
+    grid-row: 2;
+}
+
+
+/* =========================================
+   13. LEFT SIDE PANEL (eligibility + bot)
+========================================= */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 270px minmax(0, 1fr);
+    align-items: start;
+}
+
+.side-panel {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px 22px;
+
+    background: var(--cream-dark);
+    border-right: 1px solid rgba(3, 64, 27, 0.12);
+}
+
+.side-title {
+    margin-bottom: 26px;
+
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.side-list {
+    display: grid;
+    gap: 14px;
+    list-style: none;
+}
+
+.side-link {
+    display: block;
+    padding: 20px 18px;
+
+    background: var(--cream);
+    border: 1px solid rgba(3, 64, 27, 0.2);
+    border-radius: 16px;
+    color: var(--green);
+
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.side-link:hover {
+    background: var(--green);
+    color: var(--cream);
+    transform: translateX(4px);
+}
+
+.side-link-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.side-link-title span {
+    color: var(--gold-dark);
+    font-size: 18px;
+}
+
+.side-link:hover .side-link-title span {
+    color: var(--gold);
+}
+
+.side-link-urdu {
+    margin-top: 8px;
+
+    font-family: var(--font-urdu);
+    font-size: 14px;
+    line-height: 2.2;
+    direction: rtl;
+    opacity: 0.8;
+}
+
+/* pages not built yet */
+.side-link.is-soon {
+    opacity: 0.55;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   14. RESPONSIVE (header + side panel)
+========================================= */
+
+@media (max-width: 900px) {
+
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+        position: static;
+        height: auto;
+        padding: 18px var(--page-padding);
+        border-right: 0;
+        border-bottom: 1px solid rgba(3, 64, 27, 0.12);
+    }
+
+    .side-title {
+        display: none;
+    }
+
+    .side-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .site-header .header-right {
+        gap: 10px;
+    }
+
+    .social-links {
+        gap: 6px;
+    }
+
+    .social-links a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-links svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .side-list {
+        grid-template-columns: 1fr;
+    }
+}
