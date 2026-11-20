@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check Eligibility | Daryaft — دریافت</title>
+    <link rel="icon" type="image/png" href="images/DARYAFT%20LOGO%20(MAIN).png">
+    <meta name="description" content="Enter your details to discover Punjab government schemes, scholarships, grants, and interest-free loans you may be eligible for.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="eligibility.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand" aria-label="Daryaft home">
+            <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
+            <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
+        </a>
+
+        <div class="header-right">
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span>Coming soon</span>
+            </div>
+
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener" aria-label="Daryaft on Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener" aria-label="Daryaft on LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.85h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:daryaft.support@gmail.com" aria-label="Email Daryaft">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="index.html">All programmes</a>
+            <a href="index.html#how-it-works">Upcoming programmes</a>
+            <a href="vision.html">Vision</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-layout">
+
+        <aside class="side-panel" aria-label="Quick tools">
+            <h2 class="side-title">Quick tools</h2>
+
+            <ul class="side-list">
+                <li>
+                    <a href="eligibility.html" class="side-link" aria-current="page">
+                        <span class="side-link-title">Check eligibility <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">اہلیت چیک کریں</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ask.html" class="side-link">
+                        <span class="side-link-title">Talk to Daryaft bot <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">دریافت بوٹ سے بات کریں</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="page-main">
+            <main class="elig">
+
+                <div class="elig-header">
+                    <span class="elig-badge">Currently Focused on Punjab</span>
+                    <h1>Find schemes tailored to you.</h1>
+                    <p class="elig-lead">Enter your basic details below to filter live Punjab scholarships, grants, interest-free loans, skills programmes, and housing schemes.</p>
+                    <p class="elig-urdu" lang="ur" dir="rtl">اپنی معلومات درج کریں اور جانیں کہ آپ پنجاب کے کن سرکاری اور فلاحی پروگراموں کے اہل ہو سکتے ہیں۔</p>
+                </div>
+
+                <form class="elig-card" id="eligForm">
+                    <div class="elig-grid">
+
+                        <div class="elig-field">
+                            <label for="age">Your Age (Years)</label>
+                            <input type="number" id="age" name="age" min="10" max="100" placeholder="e.g. 21">
+                        </div>
+
+                        <div class="elig-field">
+                            <label for="education">Education Level</label>
+                            <select id="education" name="education">
+                                <option value="">Any education level</option>
+                                <option value="Matric / Inter">Matric / Intermediate</option>
+                                <option value="Undergraduate / BS">Undergraduate / BS</option>
+                                <option value="Graduate / MS-PhD">Graduate / MS / PhD</option>
+                                <option value="TVET / Vocational">TVET / Vocational Diploma</option>
+                            </select>
+                        </div>
+
+                        <div class="elig-field">
+                            <label for="employment">Current Status</label>
+                            <select id="employment" name="employment">
+                                <option value="">Any status</option>
+                                <option value="Student">Student</option>
+                                <option value="Unemployed">Unemployed / Looking for work</option>
+                                <option value="Fresh Graduate">Fresh Graduate</option>
+                                <option value="Self-Employed">Self-Employed</option>
+                                <option value="Small Business Owner">Small Business Owner</option>
+                            </select>
+                        </div>
+
+                        <div class="elig-field">
+                            <label for="category">Opportunity Category</label>
+                            <select id="category" name="category">
+                                <option value="">All categories</option>
+                                <option value="Scholarships">Scholarships</option>
+                                <option value="Grants">Grants</option>
+                                <option value="Interest-free loans">Interest-free loans</option>
+                                <option value="Skills training">Skills training</option>
+                                <option value="Internships">Internships</option>
+                                <option value="Housing & more">Housing &amp; more</option>
+                            </select>
+                        </div>
+
+                        <div class="elig-field">
+                            <label for="income">Monthly Household Income (PKR)</label>
+                            <input type="number" id="income" name="income" min="0" step="1000" placeholder="e.g. 45000">
+                        </div>
+
+                        <div class="elig-field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="All">Prefer not to say / All</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Transgender">Transgender</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="elig-actions">
+                        <button type="submit" class="elig-submit">Check matching schemes</button>
+                        <button type="button" class="elig-reset" id="resetBtn">Show all Punjab schemes</button>
+                    </div>
+                </form>
+
+                <section aria-live="polite">
+                    <div class="results-head">
+                        <h2>Matching Punjab Programmes</h2>
+                        <span class="results-count" id="resultsCount">Loading schemes…</span>
+                    </div>
+
+                    <div class="scheme-list" id="schemeList"></div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-top">
+            <div>
+                <p class="footer-brand">Daryaft</p>
+                <p class="footer-tag">Some things are waiting to be found.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-description">Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+                <p class="footer-urdu" lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Daryaft. All rights reserved.</span>
+            <span lang="ur" dir="rtl">© 2026 دریافت۔</span>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script>
+        (function () {
+            var cfg = window.DARYAFT_SUPABASE;
+            var form = document.getElementById('eligForm');
+            var resetBtn = document.getElementById('resetBtn');
+            var listEl = document.getElementById('schemeList');
+            var countEl = document.getElementById('resultsCount');
+            var allProgrammes = [];
+
+            function parseArray(val) {
+                if (Array.isArray(val)) return val;
+                if (typeof val === 'string') {
+                    try {
+                        var parsed = JSON.parse(val);
+                        return Array.isArray(parsed) ? parsed : [];
+                    } catch (e) {
+                        return [];
+                    }
+                }
+                return [];
+            }
+
+            function escapeHtml(str) {
+                return String(str || '')
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
+            }
+
+            function filterProgrammes() {
+                var ageVal = form.age.value ? parseInt(form.age.value, 10) : null;
+                var eduVal = form.education.value;
+                var empVal = form.employment.value;
+                var catVal = form.category.value;
+                var incVal = form.income.value ? parseInt(form.income.value, 10) : null;
+                var genVal = form.gender.value;
+
+                var matches = allProgrammes.filter(function (p) {
+                    if (catVal && p.category !== catVal) return false;
+                    if (ageVal !== null) {
+                        if (p.min_age !== null && ageVal < Number(p.min_age)) return false;
+                        if (p.max_age !== null && ageVal > Number(p.max_age)) return false;
+                    }
+                    var edus = parseArray(p.education_levels);
+                    if (eduVal && edus.length > 0 && edus.indexOf(eduVal) === -1) return false;
+
+                    var emps = parseArray(p.employment_statuses);
+                    if (empVal && emps.length > 0 && emps.indexOf(empVal) === -1) return false;
+
+                    if (incVal !== null && p.max_monthly_income_pkr !== null && incVal > Number(p.max_monthly_income_pkr)) {
+                        return false;
+                    }
+
+                    if (genVal && genVal !== 'All' && p.gender_eligibility && p.gender_eligibility !== 'All' && p.gender_eligibility !== genVal) {
+                        return false;
+                    }
+
+                    return true;
+                });
+
+                renderSchemes(matches);
+            }
+
+            function renderSchemes(items) {
+                countEl.textContent = items.length + (items.length === 1 ? ' programme found' : ' programmes found');
+
+                if (!items.length) {
+                    listEl.innerHTML = '<div class="elig-empty">No exact matches found for those filters. Try clearing one or two filters (such as income or category) to see broader Punjab opportunities.</div>';
+                    return;
+                }
+
+                listEl.innerHTML = items.map(function (p) {
+                    var docs = parseArray(p.required_documents);
+                    var edus = parseArray(p.education_levels);
+                    var reasons = [];
+
+                    if (p.min_age || p.max_age) {
+                        reasons.push('Age: ' + (p.min_age || 'Any') + '–' + (p.max_age || 'Any'));
+                    } else {
+                        reasons.push('Age: Open to all');
+                    }
+
+                    if (edus.length) {
+                        reasons.push('Education: ' + edus.join(', '));
+                    }
+
+                    if (p.max_monthly_income_pkr) {
+                        reasons.push('Income cap: PKR ' + Number(p.max_monthly_income_pkr).toLocaleString() + '/mo');
+                    }
+
+                    var statusClass = p.status === 'upcoming' ? 'tag--status-upcoming' : 'tag--status-active';
+                    var statusLabel = p.status === 'upcoming' ? 'Upcoming' : 'Active';
+
+                    return (
+                        '<article class="scheme-card">' +
+                            '<div class="scheme-meta">' +
+                                '<span class="tag tag--cat">' + escapeHtml(p.category) + '</span>' +
+                                '<span class="tag ' + statusClass + '">' + statusLabel + '</span>' +
+                                '<span class="tag tag--region">' + escapeHtml(p.region || 'Punjab') + '</span>' +
+                            '</div>' +
+                            '<h3>' + escapeHtml(p.title) + '</h3>' +
+                            (p.urdu_title ? '<p class="scheme-urdu" lang="ur" dir="rtl">' + escapeHtml(p.urdu_title) + '</p>' : '') +
+                            '<p class="scheme-summary">' + escapeHtml(p.summary) + '</p>' +
+                            '<div class="scheme-reasons">' +
+                                reasons.map(function (r) { return '<span class="reason-pill">' + escapeHtml(r) + '</span>'; }).join('') +
+                            '</div>' +
+                            (docs.length ? '<p class="scheme-docs"><strong>Key documents:</strong> ' + escapeHtml(docs.join(' · ')) + '</p>' : '') +
+                            '<div class="scheme-footer">' +
+                                '<span class="scheme-authority">Source: ' + escapeHtml(p.official_authority || 'Official Portal') + '</span>' +
+                                '<a class="scheme-link" href="' + escapeHtml(p.official_url) + '" target="_blank" rel="noopener">Verify &amp; Apply ↗</a>' +
+                            '</div>' +
+                        '</article>'
+                    );
+                }).join('');
+            }
+
+            async function loadProgrammes() {
+                try {
+                    var endpoint = cfg.url + '/rest/v1/' + encodeURIComponent('programmes table') + '?select=*&status=in.(active,upcoming)&order=status.asc,title.asc';
+                    var res = await fetch(endpoint, {
+                        headers: {
+                            'apikey': cfg.publishableKey,
+                            'Authorization': 'Bearer ' + cfg.publishableKey
+                        }
+                    });
+
+                    if (!res.ok) throw new Error('Unable to load programmes');
+                    allProgrammes = await res.json();
+                    renderSchemes(allProgrammes);
+                } catch (err) {
+                    countEl.textContent = 'Connection error';
+                    listEl.innerHTML = '<div class="elig-empty">Could not load schemes from the database. Make sure Row Level Security (SELECT policy) is enabled on "programmes table" in Supabase.</div>';
+                }
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                filterProgrammes();
+            });
+
+            resetBtn.addEventListener('click', function () {
+                form.reset();
+                renderSchemes(allProgrammes);
+            });
+
+            loadProgrammes();
+        })();
+    </script>
+
+</body>
+</html>
