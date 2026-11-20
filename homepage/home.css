@@ -1,11 +1,19 @@
 /* =========================================
    mobile-fixes.css
-   Loads AFTER style.css and home.css, so it overrides them on small screens.
+   Must load AFTER style.css and home.css so it overrides them on small screens.
    To undo everything, delete the <link> to this file in index.html.
 ========================================= */
 
 
 /* ---------- 1. Nothing may push the page wider than the screen ---------- */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
 .page-layout {
     overflow-x: clip;
@@ -21,9 +29,30 @@
     overflow: hidden;
 }
 
+/* decorations must never block taps */
+.hm-glow,
+.hm-rings,
+.hm-chips,
+.hm-tile-bg {
+    pointer-events: none;
+}
+
 img,
 svg {
     max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    overflow-wrap: break-word;
+}
+
+.brand img {
+    width: auto;
+    max-height: 44px;
 }
 
 /* easier to tap: icons and links are at least 44px */
@@ -60,6 +89,10 @@ svg {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .side-link {
+        min-height: 48px;
     }
 
     .page-main {
@@ -108,7 +141,7 @@ svg {
 
     .header-status {
         padding: 7px 10px;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     /* menu scrolls sideways with a thumb instead of wrapping */
@@ -133,6 +166,11 @@ svg {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    /* Urdu text needs more line height or the tops and bottoms get clipped */
+    [lang="ur"] {
+        line-height: 1.9;
+    }
+
     /* hero */
     .hm-hero {
         min-height: 0;
@@ -145,8 +183,8 @@ svg {
     }
 
     .hm-title {
-        font-size: clamp(40px, 12vw, 58px);
-        line-height: 1.02;
+        font-size: clamp(38px, 11.5vw, 58px);
+        line-height: 1.04;
         letter-spacing: -1.5px;
     }
 
@@ -158,6 +196,12 @@ svg {
     .hm-title-urdu {
         font-size: 22px;
         line-height: 2;
+    }
+
+    .hm-launch {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
 
     /* buttons: full width, easy to tap */
@@ -242,7 +286,27 @@ svg {
 }
 
 
-/* ---------- 4. People who ask their phone for less motion ---------- */
+/* ---------- 4. Very small phones (380px and below) ---------- */
+
+@media (max-width: 380px) {
+
+    .hm-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .hm-h2 {
+        font-size: 28px;
+    }
+
+    .hm-btn {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+/* ---------- 5. People who ask their phone for less motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
 
