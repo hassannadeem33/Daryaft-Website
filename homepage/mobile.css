@@ -1,0 +1,327 @@
+/* =========================================
+   mobile-fixes.css
+   Must load AFTER style.css and home.css so it overrides them on small screens.
+   To undo everything, delete the <link> to this file in index.html.
+========================================= */
+
+
+/* ---------- 1. Nothing may push the page wider than the screen ---------- */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.page-layout {
+    overflow-x: clip;
+}
+
+.page-main,
+.page-layout > * {
+    min-width: 0;
+}
+
+.hm-hero,
+.hm-marquee {
+    overflow: hidden;
+}
+
+/* decorations must never block taps */
+.hm-glow,
+.hm-rings,
+.hm-chips,
+.hm-tile-bg {
+    pointer-events: none;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    overflow-wrap: break-word;
+}
+
+.brand img {
+    width: auto;
+    max-height: 44px;
+}
+
+/* easier to tap: icons and links are at least 44px */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+
+/* ---------- 2. Tablets and phones (900px and below) ---------- */
+
+@media (max-width: 900px) {
+
+    /* the side panel stops being a column and becomes a strip above the page */
+    .page-layout {
+        display: block;
+    }
+
+    .side-panel {
+        position: static;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 0;
+        padding: 18px var(--page-padding);
+        border-right: 0;
+        border-bottom: 1px solid rgba(3, 64, 27, 0.15);
+    }
+
+    .side-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .side-link {
+        min-height: 48px;
+    }
+
+    .page-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* two and three column layouts become one column */
+    .hm-step-grid,
+    .hm-demo-grid,
+    .footer-top {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hm-demo-grid {
+        gap: 40px;
+    }
+
+    .hm-bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: none;
+        grid-template-rows: none;
+        grid-auto-rows: auto;
+    }
+
+    .hm-cell--lg,
+    .hm-cell--md,
+    .hm-cell--sm {
+        grid-area: auto;
+    }
+
+    .hm-cell--lg {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ---------- 3. Phones (600px and below) ---------- */
+
+@media (max-width: 600px) {
+
+    /* header: the social icons are repeated at the bottom of the page, so hide them here */
+    .header-right .social-links {
+        display: none;
+    }
+
+    .header-status {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+    /* menu scrolls sideways with a thumb instead of wrapping */
+    .navigation {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navigation a {
+        flex: none;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .side-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Urdu text needs more line height or the tops and bottoms get clipped */
+    [lang="ur"] {
+        line-height: 1.9;
+    }
+
+    /* hero */
+    .hm-hero {
+        min-height: 0;
+        padding-top: 48px;
+        padding-bottom: 56px;
+    }
+
+    .hm-chips {
+        display: none;
+    }
+
+    .hm-title {
+        font-size: clamp(38px, 11.5vw, 58px);
+        line-height: 1.04;
+        letter-spacing: -1.5px;
+    }
+
+    .hm-line {
+        display: block;
+        white-space: normal;
+    }
+
+    .hm-title-urdu {
+        font-size: 22px;
+        line-height: 2;
+    }
+
+    .hm-launch {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* buttons: full width, easy to tap */
+    .hm-actions,
+    .hm-cta-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .hm-btn {
+        width: 100%;
+        min-height: 52px;
+        justify-content: center;
+    }
+
+    /* sections and headings */
+    .hm-section {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .hm-h2 {
+        font-size: clamp(30px, 8.5vw, 42px);
+        line-height: 1.12;
+        letter-spacing: -1px;
+    }
+
+    .hm-cta h2 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.1;
+    }
+
+    .hm-marquee {
+        font-size: 14px;
+    }
+
+    /* cards: one column, readable height */
+    .hm-bento-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hm-cell--lg {
+        grid-column: auto;
+    }
+
+    .hm-tile {
+        min-height: 180px;
+        height: auto;
+    }
+
+    /* bot preview: fixed height so the page does not jump while messages appear */
+    .hm-chat {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hm-chat-body {
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    /* footer */
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 22px;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        padding: 8px 0;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
+
+
+/* ---------- 4. Very small phones (380px and below) ---------- */
+
+@media (max-width: 380px) {
+
+    .hm-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .hm-h2 {
+        font-size: 28px;
+    }
+
+    .hm-btn {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+/* ---------- 5. People who ask their phone for less motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hm-marquee-track,
+    .hm-chip,
+    .hm-ring,
+    .hm-pulse {
+        animation: none !important;
+    }
+
+    .reveal,
+    .split .w,
+    .hm-in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
