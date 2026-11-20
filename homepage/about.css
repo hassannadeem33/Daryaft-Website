@@ -1,23 +1,20 @@
-/* About page. Loads after style.css, so the header, footer and page
-   background come from your homepage styles. Everything here is scoped
-   to .about so nothing on the homepage changes. */
-
-:root {
-    --green: #03401B;
-    --cream: #F4F1E4;
-    --gold:  #F4BF4B;
-    --deep:  #03401B;
-    --rule:  color-mix(in srgb, currentColor 22%, transparent);
-}
+/* =========================================================
+   DARYAFT — ABOUT PAGE
+   Loads after style.css. Scoped to .about so global
+   header, navigation, and footer styles remain intact.
+========================================================= */
 
 .about {
     --gutter: clamp(20px, 5vw, 72px);
+    --rule: rgba(3, 64, 27, 0.22);
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 var(--gutter);
+    color: var(--green);
 }
 
 .about h1,
+.about h2,
 .about h3,
 .about .statement,
 .about .mission,
@@ -26,41 +23,56 @@
 .about .about-close p,
 .about .num,
 .about .n {
-    font-family: "Young Serif", Georgia, serif;
+    font-family: var(--font-display);
     font-weight: 400;
 }
 
 /* INTRO */
 .about-hero {
-    padding: clamp(72px, 14vw, 190px) 0 clamp(56px, 9vw, 120px);
+    padding: clamp(72px, 12vw, 160px) 0 clamp(56px, 8vw, 100px);
 }
 
-.eyebrow {
+.about .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     margin: 0 0 clamp(24px, 3vw, 36px);
-    font-size: 0.8rem;
-    letter-spacing: 0.22em;
+    color: var(--green);
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.7;
+    opacity: 1;
+}
+
+.about .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--gold-dark);
 }
 
 .about-hero h1 {
     margin: 0 0 0.45em;
-    max-width: 12ch;
-    font-size: clamp(2.9rem, 8.6vw, 7.2rem);
+    max-width: 13ch;
+    color: var(--green);
+    font-size: clamp(3rem, 8.2vw, 6.8rem);
     line-height: 1.02;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     text-wrap: balance;
 }
 
-.lead {
+.about .lead {
     margin: 0;
-    max-width: 26ch;
-    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-    line-height: 1.35;
-    color: var(--gold);
+    max-width: 30ch;
+    color: var(--text-muted);
+    font-family: var(--font-main);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.6;
 }
 
-/* SECTIONS: a narrow label column and a wide reading column */
+/* SECTIONS: narrow label column + wide reading column */
 .about-section {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -73,15 +85,21 @@
     display: flex;
     gap: 16px;
     align-items: baseline;
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
+    color: var(--green);
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
 
 .about-label .num {
-    font-size: 1rem;
+    display: inline-block;
+    padding: 0 0.18em;
+    font-size: 1.35rem;
     letter-spacing: 0;
-    color: var(--gold);
+    color: var(--green);
+    box-shadow: inset 0 -0.38em 0 var(--gold);
 }
 
 @media (min-width: 900px) {
@@ -93,7 +111,7 @@
         top: 32px;
         align-self: start;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 }
 
@@ -103,8 +121,10 @@
 
 .about-body p {
     margin: 0 0 1.5em;
-    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-    line-height: 1.8;
+    color: var(--text-muted);
+    font-family: var(--font-main);
+    font-size: clamp(1.02rem, 1.25vw, 1.15rem);
+    line-height: 1.85;
     text-wrap: pretty;
 }
 
@@ -114,10 +134,12 @@
 
 /* STANDOUT LINES */
 .about .statement {
-    margin: 1.1em 0;
-    font-size: clamp(1.8rem, 3.6vw, 2.9rem);
-    line-height: 1.14;
-    letter-spacing: -0.01em;
+    margin: 1.2em 0;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 3.4vw, 2.85rem);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
     text-wrap: balance;
 }
 
@@ -126,19 +148,22 @@
 }
 
 .about .mission {
-    margin: 0 0 1.3em;
-    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
-    line-height: 1.22;
-    letter-spacing: -0.01em;
-    color: var(--gold);
+    margin: 0 0 1.1em;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 3.3vw, 2.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     text-wrap: balance;
 }
 
 .about .belief {
-    margin: 0 0 1em;
-    max-width: 28ch;
-    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
-    line-height: 1.28;
+    margin: 0 0 1.1em;
+    max-width: 30ch;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 2.7vw, 2.25rem);
+    line-height: 1.26;
     text-wrap: balance;
 }
 
@@ -165,23 +190,25 @@
 }
 
 .do-item .n {
-    display: block;
-    margin-bottom: 22px;
-    font-size: 1rem;
-    color: var(--gold);
+    display: inline-block;
+    padding: 0 0.18em;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: var(--green);
+    box-shadow: inset 0 -0.38em 0 var(--gold);
 }
 
 .do-item h3 {
     margin: 0 0 0.5em;
-    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    color: var(--green);
+    font-size: clamp(1.45rem, 2.2vw, 1.85rem);
     line-height: 1.2;
 }
 
 .about-body .do-item p {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.65;
-    opacity: 0.85;
+    font-size: 0.98rem;
+    line-height: 1.7;
 }
 
 @media (max-width: 720px) {
@@ -202,22 +229,22 @@
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: end;
     gap: 40px;
-    margin: clamp(48px, 8vw, 120px) 0 clamp(72px, 11vw, 150px);
-    padding: clamp(36px, 6vw, 92px);
+    margin: clamp(48px, 8vw, 120px) 0 clamp(72px, 11vw, 145px);
+    padding: clamp(36px, 6vw, 88px);
     background: var(--gold);
-    color: var(--deep);
+    color: var(--green-dark);
 }
 
 .about-close p {
     margin: 0;
-    max-width: 13ch;
-    font-size: clamp(2.1rem, 5.2vw, 4.2rem);
-    line-height: 1.06;
-    letter-spacing: -0.015em;
+    max-width: 14ch;
+    font-size: clamp(2.2rem, 5.2vw, 4.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
     text-wrap: balance;
 }
 
-/* the logo's two arches, drawn in CSS */
+/* Logo arches drawn in CSS */
 .arches {
     position: relative;
     width: 170px;
@@ -243,7 +270,7 @@
     left: 58px;
     width: 112px;
     height: 112px;
-    background: var(--deep);
+    background: var(--green);
     box-shadow: 0 0 0 9px var(--gold);
 }
 
@@ -251,36 +278,4 @@
     .about-close {
         grid-template-columns: minmax(0, 1fr);
     }
-}
-
-/* current page in the menu */
-.navigation a[aria-current="page"] {
-    color: var(--gold);
-}
-/* Match the homepage: cream page, green text */
-body {
-    background: var(--cream);
-    color: var(--green);
-}
-
-/* gold text is hard to read on cream, so use green */
-.about .lead,
-.about .mission,
-.about-label .num,
-.do-item .n {
-    color: var(--green);
-}
-
-/* keep a touch of gold as a highlighter under the numbers */
-.about-label .num,
-.do-item .n {
-    display: inline-block;
-    box-shadow: inset 0 -0.4em 0 var(--gold);
-}
-
-/* current page in the menu */
-.navigation a[aria-current="page"] {
-    color: var(--green);
-    text-decoration: underline;
-    text-underline-offset: 6px;
 }
