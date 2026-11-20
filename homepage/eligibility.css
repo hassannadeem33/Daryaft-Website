@@ -1,0 +1,347 @@
+/* =========================================================
+   DARYAFT — ELIGIBILITY CHECKER PAGE
+   Loads after style.css and mobile.css.
+========================================================= */
+
+.elig {
+    --rule: rgba(3, 64, 27, 0.2);
+    padding: clamp(56px, 8vw, 104px) var(--page-padding) clamp(76px, 10vw, 140px);
+}
+
+.elig-header {
+    max-width: 780px;
+    margin-bottom: 44px;
+}
+
+.elig-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+    background: var(--cream-dark);
+    border: 1px solid rgba(3, 64, 27, 0.25);
+    border-radius: 50px;
+    color: var(--green);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.elig-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+}
+
+.elig-header h1 {
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+}
+
+.elig-lead {
+    margin-top: 18px;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.25vw, 1.12rem);
+    line-height: 1.8;
+}
+
+.elig-urdu {
+    margin-top: 10px;
+    color: var(--green);
+    font-family: var(--font-urdu);
+    font-size: 1.08rem;
+    line-height: 2.2;
+}
+
+/* DEMOGRAPHICS CARD */
+.elig-card {
+    padding: clamp(26px, 4vw, 44px);
+    background: var(--cream-dark);
+    border: 1px solid rgba(3, 64, 27, 0.16);
+    border-radius: 24px;
+    margin-bottom: 52px;
+}
+
+.elig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.elig-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.elig-field label {
+    color: var(--green);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.elig-field input,
+.elig-field select {
+    width: 100%;
+    padding: 13px 15px;
+    background: var(--cream);
+    border: 1.5px solid rgba(3, 64, 27, 0.25);
+    border-radius: 14px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: 0.96rem;
+}
+
+.elig-field input:focus,
+.elig-field select:focus {
+    outline: none;
+    background: #FFFFFF;
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(244, 191, 75, 0.35);
+}
+
+.elig-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+}
+
+.elig-submit {
+    padding: 15px 30px;
+    background: var(--green);
+    color: var(--cream);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.elig-submit:hover {
+    background: var(--gold);
+    color: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.elig-reset {
+    padding: 14px 24px;
+    background: transparent;
+    color: var(--green);
+    border: 1.5px solid rgba(3, 64, 27, 0.3);
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.elig-reset:hover {
+    background: var(--cream);
+}
+
+/* RESULTS */
+.results-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.results-head h2 {
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.6vw, 2.9rem);
+    font-weight: 400;
+}
+
+.results-count {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.scheme-list {
+    display: grid;
+    gap: 20px;
+}
+
+.scheme-card {
+    padding: clamp(24px, 3.5vw, 34px);
+    background: #FAF8F0;
+    border: 1.5px solid rgba(3, 64, 27, 0.18);
+    border-radius: 22px;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.scheme-card:hover {
+    border-color: var(--gold-dark);
+    transform: translateY(-3px);
+}
+
+.scheme-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.tag--cat {
+    background: var(--green);
+    color: var(--cream);
+}
+
+.tag--status-active {
+    background: var(--gold);
+    color: var(--green-dark);
+}
+
+.tag--status-upcoming {
+    background: var(--cream-dark);
+    color: var(--green);
+    border: 1px solid rgba(3, 64, 27, 0.25);
+}
+
+.tag--region {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid rgba(3, 64, 27, 0.2);
+}
+
+.scheme-card h3 {
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.scheme-urdu {
+    margin-top: 6px;
+    color: var(--green);
+    font-family: var(--font-urdu);
+    font-size: 1.05rem;
+    line-height: 2.1;
+}
+
+.scheme-summary {
+    margin-top: 14px;
+    max-width: 72ch;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+.scheme-reasons {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.reason-pill {
+    padding: 5px 12px;
+    background: var(--cream-dark);
+    border-radius: 8px;
+    color: var(--green);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.scheme-docs {
+    margin-top: 14px;
+    color: var(--text-dark);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.scheme-footer {
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.scheme-authority {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.scheme-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    background: var(--green);
+    color: var(--cream);
+    border-radius: 50px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.scheme-link:hover {
+    background: var(--gold);
+    color: var(--green-dark);
+}
+
+.elig-empty {
+    padding: 36px;
+    background: var(--cream-dark);
+    border-radius: 20px;
+    color: var(--green);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+    .elig-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .elig-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .elig-submit,
+    .elig-reset {
+        width: 100%;
+    }
+}
