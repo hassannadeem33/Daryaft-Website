@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
-    <!-- Reuses Daryaft's existing global header, navigation and footer styles. -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="vision.css">
 </head>
 
@@ -58,11 +58,11 @@
 
         <nav class="navigation" aria-label="Main navigation">
             <a href="index.html">All programmes</a>
-            <a href="index.html">Upcoming programmes</a>
+            <a href="index.html#how-it-works">Upcoming programmes</a>
             <a href="vision.html" aria-current="page">Vision</a>
             <a href="about.html">About</a>
             <a href="team.html">Team</a>
-            <a href="contact.html#contact">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -154,18 +154,26 @@
     </main>
 
     <footer class="site-footer" id="footer">
-        <p lang="ur" dir="rtl">دریافت</p>
-        <p>Some things are waiting to be found.</p>
-        <div class="vision-footer-links">
-            <a href="about.html">About</a>
-            <a href="vision.html" aria-current="page">Vision</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html">Contact</a>
+        <div class="footer-top">
+            <div>
+                <p class="footer-brand">Daryaft</p>
+                <p class="footer-tag">Some things are waiting to be found.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html" aria-current="page">Vision</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-description">Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+                <p class="footer-urdu" lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+            </div>
         </div>
-        <p>Daryaft is an independent initiative. We aim to work with public institutions while keeping programme information transparent and directing users to official sources.</p>
-        <p lang="ur" dir="rtl">دریافت ایک آزاد اقدام ہے۔ پروگراموں کی معلومات کی تصدیق کے لیے ہمیشہ سرکاری ذرائع سے رجوع کریں۔</p>
-        <p>© 2026 Daryaft. All rights reserved.</p>
-        <p lang="ur" dir="rtl">© 2026 دریافت۔</p>
+        <div class="footer-bottom">
+            <span>© 2026 Daryaft. All rights reserved.</span>
+            <span lang="ur" dir="rtl">© 2026 دریافت۔</span>
+        </div>
     </footer>
 </body>
 </html>
