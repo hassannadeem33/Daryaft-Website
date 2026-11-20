@@ -1,0 +1,299 @@
+/* =========================================================
+   DARYAFT — CONTACT PAGE
+   Loads after style.css and mobile.css.
+========================================================= */
+
+.contact {
+    --rule: rgba(3, 64, 27, 0.2);
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+    gap: clamp(44px, 6vw, 88px);
+    padding: clamp(56px, 8vw, 110px) var(--page-padding) clamp(76px, 10vw, 140px);
+    align-items: start;
+}
+
+.contact-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.contact-eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--gold-dark);
+}
+
+.contact-form-wrap h1 {
+    max-width: 15ch;
+    margin-bottom: 20px;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+}
+
+.contact-lead {
+    max-width: 54ch;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.25vw, 1.12rem);
+    line-height: 1.8;
+}
+
+.contact-lead-urdu {
+    max-width: 54ch;
+    margin-top: 14px;
+    color: var(--green);
+    font-family: var(--font-urdu);
+    font-size: 1.05rem;
+    line-height: 2.2;
+}
+
+/* FORM */
+.contact-form {
+    margin-top: 38px;
+    display: grid;
+    gap: 20px;
+    max-width: 620px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #FAF8F0;
+    border: 1.5px solid rgba(3, 64, 27, 0.25);
+    border-radius: 14px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    background: #FFFFFF;
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(244, 191, 75, 0.35);
+}
+
+.form-consent {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: var(--green);
+    color: var(--cream);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.form-submit:hover {
+    background: var(--gold);
+    color: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.form-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 24px;
+    background: transparent;
+    color: var(--green);
+    border: 1.5px solid rgba(3, 64, 27, 0.3);
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.form-copy-btn:hover {
+    border-color: var(--green);
+    background: var(--cream-dark);
+}
+
+.form-note {
+    min-height: 1.4em;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: var(--cream-dark);
+    border-left: 4px solid var(--gold-dark);
+    color: var(--green-dark);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.form-note:empty {
+    display: none;
+}
+
+/* RIGHT COLUMN: OTHER WAYS TO REACH US */
+.contact-info {
+    display: grid;
+    gap: 28px;
+    padding-top: 12px;
+}
+
+.info-block {
+    padding: 28px;
+    background: var(--cream-dark);
+    border: 1px solid rgba(3, 64, 27, 0.14);
+    border-radius: 20px;
+}
+
+.info-block h2 {
+    margin-bottom: 10px;
+    color: var(--green);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.info-block p {
+    color: var(--text-muted);
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.plain-link {
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.5px;
+    overflow-wrap: anywhere;
+}
+
+.plain-link:hover {
+    color: var(--gold-dark);
+}
+
+.arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: var(--green);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid var(--gold-dark);
+    padding-bottom: 4px;
+    transition: gap 0.2s ease;
+}
+
+.arrow-link::after {
+    content: "↗";
+    font-size: 1rem;
+}
+
+.arrow-link:hover {
+    gap: 14px;
+}
+
+.info-links {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 10px;
+}
+
+.info-links li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.92rem;
+}
+
+.info-links span {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+    .contact {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .field-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-submit,
+    .form-copy-btn {
+        width: 100%;
+    }
+}
