@@ -225,17 +225,20 @@
                 return html || '<p>' + safe + '</p>';
             }
 
-            function appendMessage(role, text) {
-                var div = document.createElement('div');
-                div.className = 'msg ' + (role === 'user' ? 'msg--user' : 'msg--bot');
-                if (hasUrdu(text)) {
-                    div.setAttribute('dir', 'rtl');
-                    div.setAttribute('lang', 'ur');
-                }
-                div.innerHTML = role === 'user' ? '<p>' + escapeHtml(text) + '</p>' : formatReply(text);
-                messagesEl.appendChild(div);
-                messagesEl.scrollTop = messagesEl.scrollHeight;
-            }
+           function appendMessage(role, text) {
+    var div = document.createElement('div');
+    div.className = 'msg ' + (role === 'user' ? 'msg--user' : 'msg--bot');
+    if (isMostlyUrdu(text)) {
+        div.setAttribute('dir', 'rtl');
+        div.setAttribute('lang', 'ur');
+    } else {
+        div.setAttribute('dir', 'ltr');
+        div.setAttribute('lang', 'en');
+    }
+    div.innerHTML = role === 'user' ? '<p>' + escapeHtml(text) + '</p>' : formatReply(text);
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+}
 
             function showTyping() {
                 var div = document.createElement('div');
