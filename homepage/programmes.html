@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Programmes | Daryaft — دریافت</title>
+    <link rel="icon" type="image/png" href="images/DARYAFT%20LOGO%20(MAIN).png">
+    <meta name="description" content="Explore all active and upcoming scholarships, grants, interest-free loans, skills training, and housing schemes across Punjab.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="programmes.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand" aria-label="Daryaft home">
+            <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
+            <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
+        </a>
+
+        <div class="header-right">
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span>Coming soon</span>
+            </div>
+
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener" aria-label="Daryaft on Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener" aria-label="Daryaft on LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.85h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:daryaft.support@gmail.com" aria-label="Email Daryaft">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="programmes.html" aria-current="page">All programmes</a>
+            <a href="programmes.html?status=upcoming">Upcoming programmes</a>
+            <a href="vision.html">Vision</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-layout">
+
+        <aside class="side-panel" aria-label="Quick tools">
+            <h2 class="side-title">Quick tools</h2>
+
+            <ul class="side-list">
+                <li>
+                    <a href="eligibility.html" class="side-link">
+                        <span class="side-link-title">Check eligibility <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">اہلیت چیک کریں</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ask.html" class="side-link">
+                        <span class="side-link-title">Talk to Daryaft bot <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">دریافت بوٹ سے بات کریں</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="page-main">
+            <main class="prog-page">
+
+                <section class="prog-hero">
+                    <div>
+                        <p class="prog-kicker">Punjab Opportunity Directory</p>
+                        <h1>Every scheme, <em>clearly laid out.</em></h1>
+                        <p class="prog-hero-urdu" lang="ur" dir="rtl">پنجاب کے وظائف، قرضے، گرانٹس اور تربیتی پروگرام ایک ہی جگہ۔</p>
+                    </div>
+
+                    <div class="prog-stats" aria-label="Directory summary">
+                        <div class="stat-box">
+                            <span class="stat-num" id="statActive">—</span>
+                            <span class="stat-label">Active now</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" id="statUpcoming">—</span>
+                            <span class="stat-label">Upcoming</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="prog-controls" aria-label="Filter programmes">
+                    <div class="prog-search-row">
+                        <div class="search-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7"/>
+                                <path d="M20 20l-3.5-3.5"/>
+                            </svg>
+                            <input type="search" id="searchInput" class="search-input" placeholder="Search by scheme, university, skill, or authority (English or Urdu)…" aria-label="Search programmes">
+                            <button type="button" id="clearSearch" class="search-clear" aria-label="Clear search">×</button>
+                        </div>
+
+                        <div class="status-pills" id="statusPills" role="group" aria-label="Filter by availability">
+                            <button type="button" class="status-pill is-active" data-status="all">All</button>
+                            <button type="button" class="status-pill" data-status="active">Active</button>
+                            <button type="button" class="status-pill" data-status="upcoming">Upcoming</button>
+                        </div>
+
+                        <button type="button" class="need-toggle" id="needToggle" aria-pressed="false">
+                            <span class="need-dot"></span>
+                            <span>Need-based only</span>
+                        </button>
+                    </div>
+
+                    <div class="cat-track" id="catTrack" role="tablist" aria-label="Filter by category"></div>
+                </section>
+
+                <div class="result-bar">
+                    <span id="resultSummary">Loading Punjab directory…</span>
+                    <a href="eligibility.html" class="elig-nudge">Not sure which fits you? Check eligibility ↗</a>
+                </div>
+
+                <section class="cards-grid" id="cardsGrid" aria-live="polite">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- QUICK DOSSIER MODAL -->
+    <div class="dossier-backdrop" id="dossierBackdrop" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
+        <div class="dossier">
+            <div class="dossier-top">
+                <div class="p-badges" id="dossierBadges"></div>
+                <button type="button" class="dossier-close" id="dossierClose" aria-label="Close scheme details">×</button>
+            </div>
+            <h2 id="dossierTitle"></h2>
+            <p class="dossier-urdu" id="dossierUrdu" lang="ur" dir="rtl"></p>
+
+            <div class="dossier-section">
+                <h4>Overview</h4>
+                <p id="dossierSummary"></p>
+                <p class="dossier-urdu-summary" id="dossierUrduSummary" lang="ur" dir="rtl"></p>
+            </div>
+
+            <div class="dossier-section" id="dossierCriteriaWrap">
+                <h4>Key Eligibility Criteria</h4>
+                <div class="p-chips" id="dossierCriteria"></div>
+            </div>
+
+            <div class="dossier-section" id="dossierDocsWrap">
+                <h4>Required Documents Checklist</h4>
+                <ul class="doc-list" id="dossierDocs"></ul>
+            </div>
+
+            <div class="dossier-cta-row">
+                <span class="dossier-disclaimer">Always verify final deadlines and forms on the official portal before applying.</span>
+                <a class="p-btn-apply" id="dossierApply" href="#" target="_blank" rel="noopener">Visit Official Portal ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-top">
+            <div>
+                <p class="footer-brand">Daryaft</p>
+                <p class="footer-tag">Some things are waiting to be found.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-description">Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+                <p class="footer-urdu" lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Daryaft. All rights reserved.</span>
+            <span lang="ur" dir="rtl">© 2026 دریافت۔</span>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script>
+        (function () {
+            var cfg = window.DARYAFT_SUPABASE;
+            var grid = document.getElementById('cardsGrid');
+            var catTrack = document.getElementById('catTrack');
+            var searchInput = document.getElementById('searchInput');
+            var clearSearch = document.getElementById('clearSearch');
+            var statusPills = document.getElementById('statusPills');
+            var needToggle = document.getElementById('needToggle');
+            var resultSummary = document.getElementById('resultSummary');
+            var statActive = document.getElementById('statActive');
+            var statUpcoming = document.getElementById('statUpcoming');
+
+            // Modal elements
+            var backdrop = document.getElementById('dossierBackdrop');
+            var closeBtn = document.getElementById('dossierClose');
+
+            var CATEGORIES = [
+                'All',
+                'Scholarships',
+                'Grants',
+                'Interest-free loans',
+                'Skills training',
+                'Internships',
+                'Housing & more'
+            ];
+
+            var params = new URLSearchParams(window.location.search);
+            var state = {
+                programmes: [],
+                category: CATEGORIES.indexOf(params.get('category')) !== -1 ? params.get('category') : 'All',
+                status: ['all', 'active', 'upcoming'].indexOf(params.get('status')) !== -1 ? params.get('status') : 'all',
+                needOnly: false,
+                query: ''
+            };
+
+            function parseArr(v) {
+                if (Array.isArray(v)) return v;
+                if (typeof v === 'string') {
+                    try {
+                        var parsed = JSON.parse(v);
+                        return Array.isArray(parsed) ? parsed : [];
+                    } catch (e) {
+                        return [];
+                    }
+                }
+                return [];
+            }
+
+            function esc(str) {
+                return String(str || '')
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
+            }
+
+            function buildCriteriaList(p) {
+                var list = [];
+                if (p.min_age !== null || p.max_age !== null) {
+                    list.push('Age: ' + (p.min_age || 'Any') + '–' + (p.max_age || 'Any') + ' yrs');
+                }
+                var edus = parseArr(p.education_levels);
+                if (edus.length) {
+                    list.push(edus.join(' · '));
+                }
+                if (p.max_monthly_income_pkr !== null) {
+                    list.push('Income ≤ PKR ' + Number(p.max_monthly_income_pkr).toLocaleString() + '/mo');
+                }
+                if (p.gender_eligibility && p.gender_eligibility !== 'All') {
+                    list.push('Gender: ' + p.gender_eligibility);
+                }
+                if (!list.length) {
+                    list.push('Open eligibility across Punjab');
+                }
+                return list;
+            }
+
+            function renderCategoryTabs() {
+                catTrack.innerHTML = CATEGORIES.map(function (cat) {
+                    var count = cat === 'All'
+                        ? state.programmes.length
+                        : state.programmes.filter(function (p) { return p.category === cat; }).length;
+
+                    var activeClass = state.category === cat ? ' is-active' : '';
+                    return (
+                        '<button type="button" class="cat-tab' + activeClass + '" data-cat="' + esc(cat) + '">' +
+                            '<span>' + esc(cat) + '</span>' +
+                            '<span class="cat-count">' + count + '</span>' +
+                        '</button>'
+                    );
+                }).join('');
+            }
+
+            function syncControlsUI() {
+                statusPills.querySelectorAll('.status-pill').forEach(function (btn) {
+                    btn.classList.toggle('is-active', btn.getAttribute('data-status') === state.status);
+                });
+                needToggle.classList.toggle('is-checked', state.needOnly);
+                needToggle.setAttribute('aria-pressed', String(state.needOnly));
+                clearSearch.classList.toggle('is-visible', state.query.length > 0);
+            }
+
+            function getFiltered() {
+                var q = state.query.toLowerCase();
+                return state.programmes.filter(function (p) {
+                    if (state.category !== 'All' && p.category !== state.category) return false;
+                    if (state.status !== 'all' && p.status !== state.status) return false;
+                    if (state.needOnly && !p.need_based) return false;
+                    if (q) {
+                        var haystack = [
+                            p.title,
+                            p.urdu_title,
+                            p.category,
+                            p.summary,
+                            p.urdu_summary,
+                            p.official_authority
+                        ].join(' ').toLowerCase();
+                        if (haystack.indexOf(q) === -1) return false;
+                    }
+                    return true;
+                });
+            }
+
+            function renderCards() {
+                syncControlsUI();
+                renderCategoryTabs();
+
+                var items = getFiltered();
+                resultSummary.textContent = 'Showing ' + items.length + ' of ' + state.programmes.length + ' Punjab schemes';
+
+                if (!items.length) {
+                    grid.innerHTML =
+                        '<div class="empty-box">' +
+                            '<h3>No matching programmes found</h3>' +
+                            '<p>Try clearing your search term or switching back to all categories and statuses.</p>' +
+                            '<button type="button" class="empty-reset" id="resetFiltersBtn">Reset all filters</button>' +
+                        '</div>';
+                    document.getElementById('resetFiltersBtn').addEventListener('click', resetAll);
+                    return;
+                }
+
+                grid.innerHTML = items.map(function (p, idx) {
+                    var isUpcoming = p.status === 'upcoming';
+                    var criteria = buildCriteriaList(p);
+
+                    return (
+                        '<article class="p-card" style="--stagger:' + idx + '" data-slug="' + esc(p.slug) + '">' +
+                            '<div>' +
+                                '<div class="p-card-head">' +
+                                    '<div class="p-badges">' +
+                                        '<span class="p-badge p-badge--cat">' + esc(p.category) + '</span>' +
+                                        '<span class="p-badge ' + (isUpcoming ? 'p-badge--upcoming' : 'p-badge--active') + '">' +
+                                            (isUpcoming ? 'Upcoming' : 'Active') +
+                                        '</span>' +
+                                        (p.need_based ? '<span class="p-badge p-badge--need">Need-based</span>' : '') +
+                                    '</div>' +
+                                '</div>' +
+                                '<h2>' + esc(p.title) + '</h2>' +
+                                (p.urdu_title ? '<p class="p-urdu" lang="ur" dir="rtl">' + esc(p.urdu_title) + '</p>' : '') +
+                                '<p class="p-summary">' + esc(p.summary) + '</p>' +
+                                '<div class="p-chips">' +
+                                    criteria.map(function (c) { return '<span class="p-chip">' + esc(c) + '</span>'; }).join('') +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="p-foot">' +
+                                '<span class="p-auth">' + esc(p.official_authority || 'Punjab Official') + '</span>' +
+                                '<div class="p-actions">' +
+                                    '<button type="button" class="p-btn-details" data-open-slug="' + esc(p.slug) + '">Details &amp; Docs</button>' +
+                                    '<a class="p-btn-apply" href="' + esc(p.official_url) + '" target="_blank" rel="noopener">Apply ↗</a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</article>'
+                    );
+                }).join('');
+
+                // Spotlight cursor hover effect
+                grid.querySelectorAll('.p-card').forEach(function (card) {
+                    card.addEventListener('pointermove', function (e) {
+                        var rect = card.getBoundingClientRect();
+                        card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+                        card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+                    });
+                });
+            }
+
+            function openDossier(slug) {
+                var p = state.programmes.find(function (item) { return item.slug === slug; });
+                if (!p) return;
+
+                var isUpcoming = p.status === 'upcoming';
+                document.getElementById('dossierBadges').innerHTML =
+                    '<span class="p-badge p-badge--cat">' + esc(p.category) + '</span>' +
+                    '<span class="p-badge ' + (isUpcoming ? 'p-badge--upcoming' : 'p-badge--active') + '">' +
+                        (isUpcoming ? 'Upcoming' : 'Active') +
+                    '</span>';
+
+                document.getElementById('dossierTitle').textContent = p.title;
+                var urduEl = document.getElementById('dossierUrdu');
+                urduEl.textContent = p.urdu_title || '';
+                urduEl.style.display = p.urdu_title ? 'block' : 'none';
+
+                document.getElementById('dossierSummary').textContent = p.summary;
+                var urduSumEl = document.getElementById('dossierUrduSummary');
+                urduSumEl.textContent = p.urdu_summary || '';
+                urduSumEl.style.display = p.urdu_summary ? 'block' : 'none';
+
+                var criteria = buildCriteriaList(p);
+                document.getElementById('dossierCriteria').innerHTML = criteria
+                    .map(function (c) { return '<span class="p-chip">' + esc(c) + '</span>'; })
+                    .join('');
+
+                var docs = parseArr(p.required_documents);
+                var docsWrap = document.getElementById('dossierDocsWrap');
+                if (docs.length) {
+                    docsWrap.style.display = 'block';
+                    document.getElementById('dossierDocs').innerHTML = docs
+                        .map(function (d) { return '<li>' + esc(d) + '</li>'; })
+                        .join('');
+                } else {
+                    docsWrap.style.display = 'none';
+                }
+
+                document.getElementById('dossierApply').href = p.official_url;
+                backdrop.classList.add('is-open');
+                closeBtn.focus();
+            }
+
+            function closeDossier() {
+                backdrop.classList.remove('is-open');
+            }
+
+            function resetAll() {
+                state.category = 'All';
+                state.status = 'all';
+                state.needOnly = false;
+                state.query = '';
+                searchInput.value = '';
+                renderCards();
+            }
+
+            // Event listeners
+            catTrack.addEventListener('click', function (e) {
+                var btn = e.target.closest('.cat-tab');
+                if (!btn) return;
+                state.category = btn.getAttribute('data-cat');
+                renderCards();
+            });
+
+            statusPills.addEventListener('click', function (e) {
+                var btn = e.target.closest('.status-pill');
+                if (!btn) return;
+                state.status = btn.getAttribute('data-status');
+                renderCards();
+            });
+
+            needToggle.addEventListener('click', function () {
+                state.needOnly = !state.needOnly;
+                renderCards();
+            });
+
+            searchInput.addEventListener('input', function () {
+                state.query = searchInput.value.trim();
+                renderCards();
+            });
+
+            clearSearch.addEventListener('click', function () {
+                state.query = '';
+                searchInput.value = '';
+                searchInput.focus();
+                renderCards();
+            });
+
+            grid.addEventListener('click', function (e) {
+                var btn = e.target.closest('[data-open-slug]');
+                if (btn) {
+                    openDossier(btn.getAttribute('data-open-slug'));
+                }
+            });
+
+            closeBtn.addEventListener('click', closeDossier);
+            backdrop.addEventListener('click', function (e) {
+                if (e.target === backdrop) closeDossier();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && backdrop.classList.contains('is-open')) closeDossier();
+            });
+
+            // Fetch from Supabase
+            async function init() {
+                if (!cfg || !cfg.url || !cfg.publishableKey) {
+                    resultSummary.textContent = 'Configuration missing';
+                    grid.innerHTML = '<div class="empty-box"><h3>Supabase config not loaded</h3><p>Ensure <code>supabase-config.js</code> is in the same folder as <code>programmes.html</code>.</p></div>';
+                    return;
+                }
+
+                try {
+                    var endpoint = cfg.url + '/rest/v1/' + encodeURIComponent('programmes table') + '?select=*&status=in.(active,upcoming)&order=status.asc,title.asc';
+                    var res = await fetch(endpoint, {
+                        headers: {
+                            'apikey': cfg.publishableKey,
+                            'Authorization': 'Bearer ' + cfg.publishableKey
+                        }
+                    });
+
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    state.programmes = await res.json();
+
+                    statActive.textContent = state.programmes.filter(function (p) { return p.status === 'active'; }).length;
+                    statUpcoming.textContent = state.programmes.filter(function (p) { return p.status === 'upcoming'; }).length;
+
+                    renderCards();
+                } catch (err) {
+                    resultSummary.textContent = 'Could not load schemes';
+                    grid.innerHTML = '<div class="empty-box"><h3>Unable to connect to database</h3><p>Verify that your Row Level Security SELECT policy is enabled on <code>"programmes table"</code> in Supabase.</p></div>';
+                }
+            }
+
+            init();
+        })();
+    </script>
+
+</body>
+</html>
