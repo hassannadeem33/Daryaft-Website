@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daryaft Bot | Ask in English or Urdu — دریافت بوٹ</title>
+    <link rel="icon" type="image/png" href="images/DARYAFT%20LOGO%20(MAIN).png">
+    <meta name="description" content="Ask Daryaft Bot in English or Urdu to find Punjab scholarships, grants, interest-free loans, and required documents.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="ask.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand" aria-label="Daryaft home">
+            <img src="images/DARYAFT LOGO (MAIN).png" alt="Daryaft logo">
+            <span class="brand-name" lang="ur" dir="rtl">دریافت</span>
+        </a>
+
+        <div class="header-right">
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span>Punjab Beta</span>
+            </div>
+
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/daryaftpk/" target="_blank" rel="noopener" aria-label="Daryaft on Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/daryaft" target="_blank" rel="noopener" aria-label="Daryaft on LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.85h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:daryaft.support@gmail.com" aria-label="Email Daryaft">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="programmes.html">All programmes</a>
+            <a href="programmes.html?status=upcoming">Upcoming programmes</a>
+            <a href="vision.html">Vision</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-layout">
+
+        <aside class="side-panel" aria-label="Quick tools">
+            <h2 class="side-title">Quick tools</h2>
+
+            <ul class="side-list">
+                <li>
+                    <a href="eligibility.html" class="side-link">
+                        <span class="side-link-title">Check eligibility <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">اہلیت چیک کریں</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ask.html" class="side-link" aria-current="page">
+                        <span class="side-link-title">Talk to Daryaft bot <span>↗</span></span>
+                        <span class="side-link-urdu" lang="ur" dir="rtl">دریافت بوٹ سے بات کریں</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="page-main">
+            <main class="bot-page">
+
+                <div class="bot-header">
+                    <div>
+                        <p class="bot-kicker">Bilingual Scheme Assistant</p>
+                        <h1>Ask <em>Daryaft Bot.</em></h1>
+                    </div>
+                    <p class="bot-header-urdu" lang="ur" dir="rtl">اردو یا انگریزی میں پنجاب کی اسکیموں اور شرائط کے بارے میں پوچھیں۔</p>
+                </div>
+
+                <div class="prompt-bar" id="promptBar" aria-label="Suggested questions">
+                    <button type="button" class="prompt-chip" data-prompt="I am a 20-year-old BS student in Punjab. Which scholarships or laptops can I apply for?">BS student scholarships &amp; laptops</button>
+                    <button type="button" class="prompt-chip" data-prompt="What interest-free business loans exist in Punjab right now?">Interest-free business loans</button>
+                    <button type="button" class="prompt-chip" data-prompt="Tell me the requirements and documents for Apni Chhat Apna Ghar.">Apni Chhat Apna Ghar docs</button>
+                    <button type="button" class="prompt-chip" dir="rtl" lang="ur" data-prompt="پنجاب میں کسانوں اور مویشی پال حضرات کے لیے کون سے بلا سود قرضے دستیاب ہیں؟">کسان اور لائیو اسٹاک قرضے</button>
+                </div>
+
+                <section class="chat-shell" aria-label="Daryaft Bot chat">
+                    <div class="chat-topbar">
+                        <div class="chat-identity">
+                            <div class="chat-avatar" lang="ur">د</div>
+                            <div class="chat-title-wrap">
+                                <strong>Daryaft Bot</strong>
+                                <span>Connected to live Punjab schemes database</span>
+                            </div>
+                        </div>
+                        <button type="button" class="chat-clear" id="clearChatBtn">New chat</button>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+
+                    <form class="chat-composer" id="chatForm">
+                        <textarea id="chatInput" class="chat-input" rows="1" placeholder="Ask about scholarships, loans, documents, or eligibility in English or اردو…" required></textarea>
+                        <button type="submit" class="chat-send" id="chatSendBtn">Ask ↗</button>
+                    </form>
+                </section>
+
+                <p class="bot-footnote">Daryaft Bot answers directly from Daryaft's verified Punjab directory. Always confirm final deadlines on official government portals before applying.</p>
+
+            </main>
+        </div>
+
+    </div>
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-top">
+            <div>
+                <p class="footer-brand">Daryaft</p>
+                <p class="footer-tag">Some things are waiting to be found.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-description">Daryaft is an independent information platform and is not affiliated with or operated by any government department. Always verify programme details through official sources.</p>
+                <p class="footer-urdu" lang="ur" dir="rtl">دریافت ایک آزاد معلوماتی پلیٹ فارم ہے اور کسی سرکاری ادارے کے زیرِ انتظام نہیں۔ کسی بھی پروگرام کے لیے درخواست دینے سے پہلے سرکاری ذرائع سے معلومات کی تصدیق ضرور کریں۔</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Daryaft. All rights reserved.</span>
+            <span lang="ur" dir="rtl">© 2026 دریافت۔</span>
+        </div>
+    </footer>
+
+    <script src="supabase-config.js"></script>
+    <script>
+        (function () {
+            var cfg = window.DARYAFT_SUPABASE;
+            var messagesEl = document.getElementById('chatMessages');
+            var form = document.getElementById('chatForm');
+            var input = document.getElementById('chatInput');
+            var sendBtn = document.getElementById('chatSendBtn');
+            var clearBtn = document.getElementById('clearChatBtn');
+            var promptBar = document.getElementById('promptBar');
+
+            var history = [];
+            var WELCOME_MSG = "Assalam-o-Alaikum! Tell me a little about yourself—such as your **age**, **education or work status**, or **what kind of support you need**—and I will match you with active and upcoming Punjab schemes.\n\nآپ اردو میں بھی سوال پوچھ سکتے ہیں۔";
+
+            function hasUrdu(text) {
+                return /[\u0600-\u06FF]/.test(text);
+            }
+
+            function escapeHtml(str) {
+                return String(str || '')
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
+            }
+
+            // Safe lightweight formatter for bold, links, and bullet lists
+            function formatReply(raw) {
+                var safe = escapeHtml(raw);
+
+                // Markdown links [label](https://...)
+                safe = safe.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1 ↗</a>');
+
+                // Bare https:// URLs not already inside href=""
+                safe = safe.replace(/(^|[^"'>])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2 ↗</a>');
+
+                // Bold **text**
+                safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+                var lines = safe.split(/\r?\n/);
+                var html = '';
+                var inList = false;
+
+                lines.forEach(function (line) {
+                    var trimmed = line.trim();
+                    if (/^[-*•]\s+/.test(trimmed)) {
+                        if (!inList) {
+                            html += '<ul>';
+                            inList = true;
+                        }
+                        html += '<li>' + trimmed.replace(/^[-*•]\s+/, '') + '</li>';
+                    } else {
+                        if (inList) {
+                            html += '</ul>';
+                            inList = false;
+                        }
+                        if (trimmed) {
+                            html += '<p>' + trimmed + '</p>';
+                        }
+                    }
+                });
+
+                if (inList) html += '</ul>';
+                return html || '<p>' + safe + '</p>';
+            }
+
+            function appendMessage(role, text) {
+                var div = document.createElement('div');
+                div.className = 'msg ' + (role === 'user' ? 'msg--user' : 'msg--bot');
+                if (hasUrdu(text)) {
+                    div.setAttribute('dir', 'rtl');
+                    div.setAttribute('lang', 'ur');
+                }
+                div.innerHTML = role === 'user' ? '<p>' + escapeHtml(text) + '</p>' : formatReply(text);
+                messagesEl.appendChild(div);
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+            }
+
+            function showTyping() {
+                var div = document.createElement('div');
+                div.className = 'msg msg--bot';
+                div.id = 'typingIndicator';
+                div.innerHTML = '<div class="typing-dots" aria-label="Daryaft Bot is thinking"><span></span><span></span><span></span></div>';
+                messagesEl.appendChild(div);
+                messagesEl.scrollTop = messagesEl.scrollHeight;
+            }
+
+            function hideTyping() {
+                var el = document.getElementById('typingIndicator');
+                if (el) el.remove();
+            }
+
+            async function sendMessage(text) {
+                var clean = text.trim();
+                if (!clean) return;
+
+                appendMessage('user', clean);
+                input.value = '';
+                input.style.height = 'auto';
+                sendBtn.disabled = true;
+                showTyping();
+
+                try {
+                    if (!cfg || !cfg.url || !cfg.publishableKey) {
+                        throw new Error('supabase-config.js is not loaded.');
+                    }
+
+                    var res = await fetch(cfg.url + '/functions/v1/daryaft-bot', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': cfg.publishableKey,
+                            'Authorization': 'Bearer ' + cfg.publishableKey
+                        },
+                        body: JSON.stringify({
+                            message: clean,
+                            history: history
+                        })
+                    });
+
+                    var data = await res.json();
+                    hideTyping();
+
+                    if (!res.ok || data.error) {
+                        throw new Error(data.error || 'HTTP ' + res.status);
+                    }
+
+                    history.push({ role: 'user', text: clean });
+                    history.push({ role: 'model', text: data.reply });
+                    appendMessage('model', data.reply);
+                } catch (err) {
+                    hideTyping();
+                    appendMessage(
+                        'model',
+                        'I could not connect to the Daryaft Bot service right now (' + err.message + '). Meanwhile, you can browse all schemes on **programmes.html** or filter by your profile on **eligibility.html**.'
+                    );
+                } finally {
+                    sendBtn.disabled = false;
+                    input.focus();
+                }
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                sendMessage(input.value);
+            });
+
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage(input.value);
+                }
+            });
+
+            input.addEventListener('input', function () {
+                input.style.height = 'auto';
+                input.style.height = Math.min(input.scrollHeight, 140) + 'px';
+            });
+
+            promptBar.addEventListener('click', function (e) {
+                var chip = e.target.closest('.prompt-chip');
+                if (!chip) return;
+                sendMessage(chip.getAttribute('data-prompt'));
+            });
+
+            clearBtn.addEventListener('click', function () {
+                history = [];
+                messagesEl.innerHTML = '';
+                appendMessage('model', WELCOME_MSG);
+            });
+
+            // Initialize welcome message
+            appendMessage('model', WELCOME_MSG);
+        })();
+    </script>
+
+</body>
+</html>
