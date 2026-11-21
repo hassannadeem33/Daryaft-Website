@@ -171,9 +171,11 @@
             var history = [];
             var WELCOME_MSG = "Assalam-o-Alaikum! Tell me a little about yourself—such as your **age**, **education or work status**, or **what kind of support you need**—and I will match you with active and upcoming Punjab schemes.\n\nآپ اردو میں بھی سوال پوچھ سکتے ہیں۔";
 
-            function hasUrdu(text) {
-                return /[\u0600-\u06FF]/.test(text);
-            }
+         function isMostlyUrdu(text) {
+    var urduChars = (text.match(/[\u0600-\u06FF]/g) || []).length;
+    var latinChars = (text.match(/[A-Za-z]/g) || []).length;
+    return urduChars > latinChars && urduChars >= 6;
+}
 
             function escapeHtml(str) {
                 return String(str || '')
