@@ -70,19 +70,6 @@ ul { list-style: none; }
     margin-right: var(--page-padding);
 }
 
-.header-status {
-    display: flex; align-items: center; gap: 9px;
-    padding: 10px 15px;
-    border: 1px solid rgba(3, 64, 27, 0.25);
-    border-radius: 50px;
-    color: var(--green);
-    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-}
-.status-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--gold-dark);
-    box-shadow: 0 0 0 4px rgba(244, 191, 75, 0.25);
-}
 
 .social-links { display: flex; align-items: center; gap: 10px; }
 .social-links a {
